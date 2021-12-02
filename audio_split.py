@@ -18,8 +18,7 @@ recordings = pd.read_csv('./dataframes/recordings.csv')
 wav_files = []
 
 for index, row in recordings.iterrows():
-    print(row[1])
-    rec_filename = row[1]
+    rec_filename = row[0]
     chunk_length_ms = 5000 
     wav_split(rec_filename , chunk_length_ms)
 
